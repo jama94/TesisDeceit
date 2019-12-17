@@ -1,0 +1,86 @@
+%INCLUIR NUEVOS COMANDOS
+\newcommand{\bx}{\overline{x}}
+\newcommand{\by}{\overline{y}}
+\newcommand{\peers}{\emph{peers} }
+\newcommand{\peer}{\emph{peer} }
+\newcommand{\downloaders}{\emph{downloaders} }
+\newcommand{\downloader}{\emph{downloader} }
+\newcommand{\seeds}{\emph{seeds} }
+\newcommand{\seed}{\emph{seed} }
+\newcommand{\chunks}{\emph{chunks} }
+\newcommand{\chunk}{\emph{chunk} }
+\newcommand{\tracker}{\emph{tracker}}
+
+\include{preambulo}
+
+%INICIO DEL DOCUMENTO
+\begin{document}
+	\thispagestyle{empty}
+
+	%INCLUIR LA PORTADA
+	\include{0A_Portada/portada}
+	%\frontmatter
+	
+        %INCLUIR DOCUMENTOS
+        \include{0A1_Documents/SIP14}
+        \include{0A1_Documents/CesionDerechos}
+        
+		%INCLUIR EL ABSTRACT Y EL RESUMEN
+		\include{0C_Abstract_Resumen/resumen}
+		\include{0C_Abstract_Resumen/abstract}
+		
+		%INCUIR LA DEDICATORIA
+		\include{0B_Dedicatoria/dedicatoria}
+		
+		%INSERTAR EL ÍNDICE
+		\onehalfspacing
+        \tableofcontents{}
+        \singlespacing
+
+		%INSERTAR LA LISTA DE FIGURAS
+		\listoffigures{}
+		
+		%INSERTAR LA LISTA DE TABLAS
+		\listoftables{}
+		\renewcommand{\listtablename}{Índice de tablas} 
+        \renewcommand{\tablename}{Tabla} 
+		%INSERTAR LA LISTA DE ALGORITMOS
+	    \listofalgorithms
+
+		%\mainmatter
+
+		%INCLUIR EL CAPÍTULO 1
+		\include{01_Chapter_1/Chapter1}
+
+		%INCLUIR EL CAPÍTULO 2
+		\include{02_Chapter_2/Chapter2}
+		
+		%INCLUIR EL CAPÍTULO 3
+		\include{03_Chapter_3/Chapter3}
+
+    	%INCLUIR EL CAPÍTULO 4
+		\include{04_Chapter_4/Chapter4}
+		
+		%INCLUIR EL CAPÍTULO 5
+		\include{05_Chapter_5/Chapter5}
+
+    	%INCLUIR CONCLUSIONES
+    	\include{XA_Conclusiones/conclusiones}
+    	
+    	%INCLUIR TRABAJO FUTURO
+    	\include{XB_Futuro/Futuro}
+	
+	\backmatter
+	%INCLUIR Apéndice A
+	%\include{XAA_Appendix_A/Appendix_A}
+	
+	%INCLUIR Apéndice B
+	%\include{XAB_Appendix_B/Appendix_B}
+
+	%INCLUIR LA BIBLIOGRAFÍA
+	%\include{XB_Bibligrafia/Reference}
+    \bibliographystyle{plane}
+	\bibliography{XB_Bibligrafia/References2}
+
+%FIN DEL DOCUMENTO
+\end{document}

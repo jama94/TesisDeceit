@@ -1,0 +1,170 @@
+%Configuración del documento
+\documentclass[12pt, letter, twoside, openany]{book}
+%\documentclass[11 pt , letterpaper , twoside , openright{book}
+%\frenchspacing \addtolength{\hoffset}{-2.5cm}
+%\addtolength{\textwidth}{4cm} \addtolength{\voffset}{-2.5cm}
+%\addtolength{\textheight}{4cm}
+\usepackage{makeidx}
+
+	\addtolength{\oddsidemargin}{-0.3in}%{-.875in}
+	\addtolength{\evensidemargin}{-1.375in}%{-.875in}
+	\addtolength{\textwidth}{1.75in}
+
+	\addtolength{\topmargin}{-.875in}
+	\addtolength{\textheight}{1.75in}
+
+%\let\tmp\oddsidemargin
+%\let\oddsidemargin\evensidemargin
+%\let\evensidemargin\tmp
+%\reversemarginpar
+
+%\documentclass[a4paper,12pt,openany]{memoir}
+
+%\usepackage{layout}
+
+%Paquetes
+\usepackage[english,spanish,mexico]{babel} %incluir spanish para tesis en español
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{amsthm}
+\usepackage{ upgreek }
+%\usepackage{abstract}
+\usepackage{algorithmic}
+\usepackage[spanish, boxruled, linesnumbered, dotocloa]{algorithm2e}% cambiar english por spanish en tesis en español
+%\usepackage[options]{algorithm2e}
+%\usepackage[chapter]{algorithm}
+\usepackage{amsmath,amssymb,amsfonts,latexsym,cancel}
+\usepackage{tkz-euclide,subfigure}
+\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage{pgf}
+%\usetkzobj{all}
+%\usepackage{rawfonts}
+%\usepackage{pictexwd}
+\usepackage{tikz}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{verbatim}
+\usepackage{pgfplots}
+\usepackage[normalem]{ulem}
+\usepackage{array}
+\usepackage{textcomp}
+\usepackage[hidelinks]{hyperref}
+\usepackage{multicol}
+\usepackage{boxedminipage}
+\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{tocbibind}
+%\usepackage{dsfont}
+\usepackage{setspace} 
+
+\usepackage[normalem]{ulem}
+
+\usetikzlibrary{arrows,calc,automata,snakes,shapes}
+
+\spanishdecimal{.} %quitar comentario para tesis en español
+
+%\renewcommand{\KwIn}{ \textbf{Entrada: }} 
+%\renewcommand{\KwOut}{ \textbf{Salida: }} 
+
+\usepackage{fancyhdr}
+
+%\newenvironment{abstract}
+%{\cleardoublepage \null \vfill \begin{center}
+%\bfseries \abstractname \end{center}}
+%{\vfill \null}
+
+
+% cabecera y pie
+\fancyhf{} % clear all header and footer fields
+\pagestyle{fancy} % seleccionamos un estilo
+%\fancypagestyle{plain}{\pagestyle{fancy}}
+
+
+%\pagestyle{empty}
+
+%\fancypagestyle{plain}{\pagestyle{fancy}}
+%\lhead{} % texto izquierda de la cabecera
+%\chead{Amplificación de Algoritmos de Aproximación Aleatorizados} % texto centro de la cabecera
+%\rhead{\thepage} % número de página a la derecha
+
+%\lfoot{Centro de Investigación en Computación - Instituto Politécnico Nacional} % texto izquierda del pie
+%\cfoot{\includegraphics[width=1cm]{logo}} % imagen centro del pie
+%\rfoot{Instituto Politécnico Nacional} % texto derecha del pie
+\renewcommand{\headrulewidth}{0.4pt} % grosor de la línea de la cabecera
+%\renewcommand{\footrulewidth}{0.4pt} % grosor de la línea del pie
+%\rfoot{\thepage} % número de página a la derecha
+
+\fancyhead[LO]{\emph{\rightmark}} % Páginas Pares numeradas a la derecha
+\fancyhead[RE]{\emph{\leftmark}} % Páginas Impares numeradas a la izquierda
+
+\fancyhead[RO]{\thepage} % Páginas Pares numeradas a la derecha
+\fancyhead[LE]{\thepage} % Páginas Impares numeradas a la izquierda
+
+%\renewcommand{\thechapter}{\Roman{chapter}}
+
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}[theorem]{Proposición}
+\newtheorem{corollary}[theorem]{Corolario}
+\newtheorem{definition}{Definición}
+%\floatname{algorithm}{Algoritmo}
+
+\makeatletter
+%\renewcommand{\listalgorithmcfname}{Índice de algoritmos}%
+%\renewcommand{\algorithmcfname}{Algoritmo}%
+%\renewcommand{\algocf@typo}{}%
+%\renewcommand{\@algocf@procname}{Procedimiento}
+%\renewcommand{\@algocf@funcname}{Función}
+\makeatother
+
+%\usepackage{tocbibind}
+%\newcommand{\listofalgorithmes}{\tocfile{\listalgorithmcfname}{loa}}
+
+
+\setcounter{secnumdepth}{3} 
+\setcounter{tocdepth}{3} 
+
+\newenvironment{itemize*}
+{\begin{itemize}
+\setlength{\itemsep}{0pt}
+\setlength{\parsep}{0pt}
+\setlength{\topsep}{0pt}
+%\setlength{\partopsep}{0pt}
+\setlength{\parskip}{0pt}}
+{\end{itemize}}
+
+\usepackage{enumitem}
+
+%\addtocontents{toc}{\protect\vspace{10pt}}
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
+
+\renewcommand{\labelitemii}{$\diamond$}
+
+\bibliographystyle{acm}
+
+\SetKwInput{KwEntrada}{Entrada}
+\SetKwInput{KwSalida}{Salida}
+
+\selectlanguage{spanish} %CAMBIAR A Spanish para tesis en español
+
+\widowpenalty=100000 
+\clubpenalty=100000
+%\makeindex
+
+
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.9}
+%\definecolor{white}{1.0}

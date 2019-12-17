@@ -1,0 +1,124 @@
+% Chapter 1
+
+\chapter{Introducción} % Main chapter title
+
+\label{Chapter1} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+
+\begin{onehalfspacing}
+
+%----------------------------------------------------------------------------------------
+
+% Define some commands to keep the formatting separated from the content 
+\newcommand{\keyword}[1]{\textbf{#1}}
+\newcommand{\tabhead}[1]{\textbf{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\file}[1]{\texttt{\bfseries#1}}
+\newcommand{\option}[1]{\texttt{\itshape#1}}
+
+%----------------------------------------------------------------------------------------
+Mentir se define como un intento intencional de engañar a otros \cite{Abouelenien2017DetectingModalities}. Diariamente ocurren diferentes instancias de comportamiento engañoso, tales como mentiras, falsificaciones y otros. Detectar mentiras ha sido de gran interés para las comunidad científica \cite{Abouelenien2016AnalyzingApproach}, ya que como menciona el Dr. Paul Ekman, un profesional en detectar mentiras, existen varias pistas que involucran la cara, el cuerpo y la voz, que delatan a un individuo cuando miente \cite{Bhaskaran2011LieLearning}. Psicólogos expertos en el comportamiento de las personas generalmente creen que las mentiras causan reacciones psicológicas como un incremento del ritmo cardiaco, la presión sanguínea y la respiración, evidenciando la presencia de una mentira. Para el análisis facial, Ekman recomienda enfocarnos en la mitad superior de la cara ya que una verdadera emoción no puede ser controlada tan fácilmente en esta zona. “Somos más aptos de controlar la mitad inferior de nuestra cara; probablemente porque en esta zona se encuentra nuestra boca y es donde sale el discurso”, dice Ekman \cite{Bhaskaran2011LieLearning}.\\
+
+Durante algún tiempo se ha utilizado el polígrafo, un sofisticado instrumento capaz de detectar las tres reacciones fisiológicas mencionadas anteriormente y se ha convertido en el instrumento más confiable para detectar mentiras. Hasta el momento se ha mostrado en diferentes investigaciones que es posible detectar mentiras y verdades con un porcentaje de precisión del 70\% a través de exámenes de polígrafo, sin embargo, se ha probado que medir reacciones psicológicas es un procedimiento incorrecto para detectar mentiras debido a otros factores tales como estrés, agotamiento e intrusividad de los sensores basados en contacto. También es necesario la calibración, un ambiente controlado e individuos especializados en exámenes de polígrafos \cite{Perez-rosasDeceptionData},\cite{Perez-Rosas2015VerbalDetection},\cite{Perez-rosas2000DetectingBehavior}. De igual manera, la decisión que tienen los expertos si cierto comportamiento delata mentira usualmente está asociado a prejuicios que tienen como consecuencia una errónea clasificación \cite{Bhaskaran2011LieLearning}.\\
+
+Expertos en detección de mentiras así cómo sistemas computacionales han sido necesarios para detectar mentiras ya que se ha demostrado que la habilidad humana promedio para detectar mentiras es del 54\% \cite{Bond2006AccuracyJudgments}.\\
+
+Investigadores en detección de mentiras han encontrado que existen pistas al observar las expresiones faciales, los gestos, variaciones térmicas en el cuerpo, patrones de palabras y la consistencia de las declaraciones, entre otros métodos, que delatan si una persona miente \cite{Bhaskaran2011LieLearning}.\\
+
+Detectar mentiras no ha sido un proceso fácil para los humanos y se requiere de formación y experiencia para detectarlas correctamente. Con el poder del cómputo actual y el Aprendizaje Profundo como herramienta de inteligencia artificial,  podemos darle a la computadora la habilidad de aprender, identificar, clasificar y cuantificar patrones y características visuales de la misma forma que los seres humanos y de esta manera se pueda crear un sistema capaz de detectar mentiras de manera automática.\\
+
+%This document is divided as follows: In Chapter \ref{Chapter2} and \ref{Chapter3} related works to this research are discussed, from general organizational psychology foundations for resume analysis, to specific implementations that automate the process of the ideal candidate selection and job recommendation. Then, our proposal is detailed in Chapter \ref{Chapter4}. Experiments and results are described in Chapter \ref{Chapter5}; and finally our conclusions are drawn, and possible future directions of this research are outlined.\\
+%
+
+%----------------------------------------------------------------------------------------
+\section{Definiciones}
+\label{sec:Definiciones}
+%----------------------------------------------------------------------------------------
+
+Sistema invasivo: con sistema invasivo nos referimos a cierto sistema que requiere estar en la distancia del espacio personal o tocar la piel humana para hacer mediciones para alguna prueba o experimento.
+
+%----------------------------------------------------------------------------------------
+\section{Antecedentes}
+\label{sec:Antecedentes}
+%----------------------------------------------------------------------------------------
+
+Las mentiras son sucesos comunes que suceden diariamente en nuestra vida. Estas pueden llegar a ser inofensivas, otras graves con consecuencias y otras más pueden llegar a convertirse en un peligro para la sociedad. Las mentiras pueden afectar varias instituciones y lugares, por ejemplo,  en los tribunales de justicia se afecta la justicia ya que dejar a un acusado culpable en libertad tiene repercusiones en las cuales se ven afectadas incluso vidas humanas. Por lo tanto, la detección precisa de mentiras en una situación de alto riesgo es crucial para la seguridad personal y pública \cite{Wu2018DeceptionVideos}.\\
+
+Otro ejemplo y que sirvió de motivación para esta investigación, son las entrevistas de trabajo. Una persona incentivada por su deseo de conseguir un trabajo emplea tácticas como la exageración de sus habilidades y fortalezas, mostrar completa seguridad ante situaciones complicadas y engaño en sus objetivos a mediano y largo plazo, entre otras cosas. Los reclutadores deben de tener la suficiente información para decidir si se debe o no contratar al entrevistado; De igual forma es recomendable que tenga habilidades para detectar engaño ya que si el entrevistado al puesto de trabajo, convence al reclutador de que es una persona apta para ese puesto y no es el caso, puede causar perdidas a la empresa, institución, etc. Si este fenómeno se sigue repitiendo, las perdidas por tiempo y recursos de capacitación pueden incrementar considerablemente. Contratar y capacitar a nuevas personas en una empresa tiene un costo promedio de 1,075 dólares en Estados Unidos el cual aumento 200 dólares el 2017. El costo anual total por capacitación del 2016 al 2017 en Estados Unidos fue de 91 billones de dólares y desafortunadamente varias de las personas que son contratadas y capacitadas en diferentes trabajos, deciden abandonarlo. Renunciar prematuramente (Premature Turnover) es una de las principales razones por las cuales resulta tan costoso la capacitación y es la razón por la cual existen varios filtros para evitar este problema \cite{Williams2008IIndustry}. Un método amigable y confiable que ayude a evaluar si una declaración es mentira o verdad para saber si una persona puede renunciar prematuramente, ayudaría a disminuir los costos tan altos por Premature Turnover.
+Varios sistemas se han creado para poder detectar mentiras y varios estudios han mostrado que gente ordinaria y expertos entrenados tienen poca exactitud diferenciando entre honestos y mentirosos \cite{Aamondt2006WhoDeception}.\\
+
+El instrumento más utilizado y confiable para detectar mentiras es el polígrafo; éste tiene una exactitud para detectar mentiras por encima del 70\% en situaciones completamente adecuadas. Sin embargo, el análisis manual que tienen los exámenes de polígrafo requiere tiempo y el resultado es dependiente de expertos. Procesar 10 minutos de sesión de una interrogación típica utilizando el polígrafo, puede llegar a tardar bastantes horas \cite{Tsiamyrtzis2005LieVideo}. El costo de construir instrumentos especializados, la necesidad de expertos entrenados para ejecutar el polígrafo y la incomodidad al ser un sistema invasivo, ha motivado a varios investigadores en encontrar una manera más eficiente de detectar mentiras \cite{Lu2012Conventional-or-high-capacity-thickeners-a-better-choice-to-make.pdf,Pollina2006FacialTest}. \\
+
+A través de tecnología térmica se ha tratado de solucionar los problemas que tienen los polígrafos. Las imágenes térmicas ofrecen una medición fisiológica tales como flujo de sangre, pulso cardiaco, respiración y distribución de los vasos sanguíneos de la misma forma que el polígrafo \cite{Rajoub2014ThermalDetection}. Utilizando cámaras térmicas para detectar mentiras, Warmeling \cite{Warmelink2011ThermalAirports} simuló mentiras y culpabilidad en un aeropuerto en la que las personas debían mentir con el destino verdadero al que iban a viajar y tuvieron una precisión del 64\% para detectar verdades y 69\% para detectar mentiras. Otros estudios extrajeron patrones de fluctuación de la temperatura facial mediante un modelado de transferencia de calor no lineal \cite{Lu2012Conventional-or-high-capacity-thickeners-a-better-choice-to-make.pdf}; este modelo transforma los datos térmicos brutos en información de tasa de flujo sanguíneo de la zona periorbital y obtuvieron una exactitud del 84\% y de esta manera aumentaron la fiabilidad y exactitud de un examen tradicional de polígrafo. Desafortunadamente las cámaras térmicas utilizadas en detectar mentiras tienen un costo elevado y requieren de iluminación y escenarios específicos \cite{Rajoub2014ThermalDetection} por lo que hace que el sistema dependa de un ambiente completamente controlado al igual que el polígrafo .\\
+
+Para evitar estas desventajas, investigadores analizaron otras maneras de detectar mentiras que no requirieran de un ambiente controlado, un costo tan elevado y con una exactitud cercana al polígrafo.
+Se muestran un porcentaje de exactitud para detectar mentiras  entre el 45\% y 60\% a través de pistas no verbales y se encontró que en 40 estudios se tenía un 67\% de exactitud para detectar verdades y 44\% para detectar mentiras utilizando pistas no verbales (expresiones faciales, gestos, posiciones del cuerpo, movimientos oculares, entre otros) \cite{Vrij2000DetectingBehavior}.\\
+
+En la actualidad con el poder de cómputo actual y con el uso de diferentes filtros espaciales se ha logrado extraer características del lenguaje no verbal en imágenes para diferentes tareas que requieren de visión artificial; de esta forma se ha logrado clasificar acciones humanas, identificar gestos que indican alguna emoción, cuantificar patrones y otras características dependiendo del problema que se desee solucionar. Con el uso de estos filtros y con el uso del aprendizaje profundo se puede llegar a una solución no invasiva para detectar si una persona miente o dice verdades a través del lenguaje no verbal extraído de un video.\\
+
+
+%----------------------------------------------------------------------------------------
+\section{Planteamiento del problema}
+\label{sec:Planteamiento_del_problema}
+%---------------------------------------------------------------------------------------
+%Esta tesis pretende mostrar una propuesta para detectar mentiras resolviendo la mayoría de los problemas que tienen los métodos mostrados anteriormente tales como la invasión (contacto de múltiples sensores en el pecho, antebrazo, cuello, etc), costo, escenarios completamente controlados, necesidad de instrumentos especializados y necesidad de expertos. Se necesitarán videos con especificaciones  técnicas que cualquier cámara de video en el mercado actual tiene y se clasificarán mentiras y verdades a través del uso de aprendizaje profundo. El modelo debe ser capaz de clasificar si en un video una persona esta mintiendo o diciendo la verdad.
+
+%En la actualidad las diferentes metodologías para detectar mentiras  más utilizadas tienen problemáticas para lograr a cabo su objetivo que generalmente requieren de un análisis manual que tienen como consecuencia bastante tiempo para evaluar su sistema y la decisión que toman los expertos para decidir su un comportamiento delata mentira o verdad tiene a un errores causado por una tendencia (bias) \cite{Bhaskaran2011LieLearning}. Otras problemáticas que tienen es que requieren de instrumentos especializados capaz de medir respuestas fisiológicas con exactitud, requieren de escenarios con características específicas (escenarios controlados) y necesitan de expertos entrenados para evaluar las pruebas correctamente. Existen diferentes métodos que muestran que a través de la extracción de ciertas características de interés en videos, es posible poder detectar mentiras, ya sea a través de expertos, cámaras térmicas, software especial, aprendizaje profundo, entre otros \cite{KrishnamurthyADetection,Abouelenien2016AnalyzingApproach,Rajoub2014ThermalDetection,Warmelink2011ThermalAirports,Grubin2005LieReview,Yang2017DeepImages}.En el presente trabajo se enfocará en solucionar algunas problemáticas que se tienen para detectar mentiras tales como la invasión (contacto de múltiples sensores en el pecho, antebrazo, cuello, etc), necesidad de instrumentos especializados y necesidad de expertos entrenados para evaluar el modelo. Se necesitarán videos con especificaciones técnicas que cualquier cámara de video en el mercado actual tiene y se clasificarán mentiras y verdades en videos a través del uso de aprendizaje profundo.\\
+
+En la actualidad las metodologías más utilizadas para detectar mentiras que involucran el uso del polígrafo y cámaras térmicas, presentan diferentes problemáticas para lograr a cabo su objetivo. El polígrafo que es el instrumento más confiable y utilizado para detectar mentiras, generalmente requiere de un análisis manual por varios expertos que posteriormente llegan a una conciliación para determinar si un comportamiento de los resultados obtenidos delata mentira o verdad, teniendo como consecuencia un período de tiempo largo para analizar los datos y la decisión que toman los expertos por el prejuicio de determinar si un comportamiento delata mentira o verdad puede tener como consecuencia errores al momento de clasificar si una persona miente o dice la verdad \cite{Tsiamyrtzis2005LieVideo}. Otra problemática que tiene el uso del polígrafo es que requiere de instrumentos especializados capaces de medir respuestas fisiológicas con exactitud. Estos, deben ser conectados por un experto entrenado que valida si los instrumentos fueron instalados correctamente. El uso de metodologías que involucran las cámaras térmicas también tienen la desventaja de necesitar instrumentos especializados que requieren medir los cambios fisiológicos a través de la temperatura de un individuo para decidir si miente o dice la verdad, además, requieren de escenarios controlados térmicamente validados manualmente por una persona.\\
+
+Existen diferentes métodos que muestran que a través de la extracción de ciertas características de interés en videos, es posible detectar mentiras, ya sea a través de expertos, cámaras térmicas, aprendizaje profundo, entre otros \cite{KrishnamurthyADetection,Abouelenien2016AnalyzingApproach,Rajoub2014ThermalDetection,Warmelink2011ThermalAirports,Grubin2005LieReview,Yang2017DeepImages}. El presente trabajo se enfocará en solucionar algunas problemáticas que se tienen para detectar mentiras tales como la invasión (contacto de múltiples sensores en el pecho, antebrazo, cuello, etc), necesidad de instrumentos especializados y necesidad de expertos entrenados que analicen la información obtenida para decidir si un comportamiento delata mentira o verdad. Se necesitarán videos con especificaciones técnicas que cualquier cámara de video en el mercado actual tiene y se clasificarán mentiras y verdades en videos a través del uso de aprendizaje profundo.\\
+
+
+\section{Hipótesis}
+\label{sec:Hipotesis}
+
+La hipótesis planteada por este trabajo propone que a través de diferentes filtros espaciales aplicados a los fotogramas de un video y con el uso del aprendizaje profundo es posible extraer características con diferentes niveles de abstracción en los videos que indican si una persona miente o dice la verdad.\\
+
+%para evitar el uso de sistemas multimodales, instrumentación especializada, costo elevado y personas extrayendo características manualmente.
+
+
+
+%----------------------------------------------------------------------------------------
+\section{Objetivos}
+\label{sec:Objetivos}
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+\subsection{Objetivo General}
+\label{subsec:Objetivo_General}
+%----------------------------------------------------------------------------------------
+%Elaborar un sistema basado en deep learning capaz de detectar si una persona miente, sin ser un sistema invasivo,  sin necesidad de expertos, aplicable en entrevistas de trabajo y a bajo costo. Dicho sistema debe alcanzar los estándares actuales para clasificar mentiras y verdades.\\
+
+%Elaborar un modelo basado en aprendizaje profundo capaz de detectar si ciertos individuos mienten o dicen la verdad en v ́ıdeos, sin ser invasivo, sin necesidad de expertos, a bajo costo y aplicable en entrevistas de trabajo.\\
+
+%Elaborar un modelo basado en aprendizaje profundo capaz de detectar si ciertos individuos mienten o dicen la verdad en videos, sin ser invasivo, sin necesidad de expertos, a bajo costo y aplicable en entrevistas de trabajo.\\
+
+%Elaborar un modelo basado en aprendizaje profundo capaz de clasificar videos como verdad o mentira de individuos dando declaraciones falsas o verdaderas, sin ser invasivo, sin necesidad de expertos, a bajo costo y con los estándares actuales para clasificar verdades y mentiras a través de métodos no invasivos.\\
+
+%Elaborar un modelo basado en aprendizaje profundo capaz de clasificar declaraciones en video como verdad o mentira utilizando exclusivamente la información visual para cumplir con las características de ser un modelo no invasivo que no requiere de instrumentos especializados y de un experto para evaluar las pruebas. Posteriormente comparar el desempeño del modelo con otras metodologías presentadas en el estado del arte.
+
+Elaborar un modelo basado en aprendizaje profundo capaz de clasificar declaraciones en video como verdad o mentira utilizando únicamente la información visual proporcionada por los fotogramas que tiene un video.
+%----------------------------------------------------------------------------------------
+\subsection{Objetivos particulares}
+\label{subsec:Objetivos_particulares}
+%----------------------------------------------------------------------------------------
+\begin{enumerate}
+
+    \item Consultar y aprender cómo los especialistas detectan mentiras en un individuo común y cuál es la exactitud que tienen.
+    \item Investigar el estado del arte en detección de mentiras utilizando diferentes herramientas  y métodos como cámaras térmicas,  polígrafos, movimientos oculares, entre otros.
+    \item Consultar y descargar videos de los conjuntos utilizados en el estado del arte, las cuales contienen personas con declaraciones falsas y verdaderas. 
+    \item Proponer una arquitectura de red neuronal profunda que clasifique si un video contiene una declaración falsa y verdadera.
+    \item Entrenar la red neuronal profunda con los videos de las bases de datos.
+    \item Hacer pruebas, analizar la información y comparar resultados con el estado del arte.
+    
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+\section{Justificación}
+\label{subsec:Justificaci0n}
+%----------------------------------------------------------------------------------------
+
+La detección de mentiras de manera automática, a bajo costo, confiable, no invasiva y sin necesidad de expertos es una de las tareas que computólogos y psicólogos han tenido por varios años. Por lo general cuando se tiene una solución confiable, se sacrifica la eficiencia y el trato humano, o cuando es amigable no invasivo, se sacrifica el costo; es por eso que hacer un método capaz de detectar mentiras, que cumpla con los requisitos mostrados anteriormente es a lo que la mayoría de los investigadores en mentiras desean llegar.
+
+\end{onehalfspacing}
+%
